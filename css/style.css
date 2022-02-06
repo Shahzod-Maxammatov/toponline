@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+/*! ******** Started Default Styles *********/
+
+* {margin: 0;padding: 0; box-sizing: border-box;}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4,
+h5, h5, h6, ul, p {
+  margin-bottom: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+button, 
+input {
+  outline: none;
+  border: 0;
+}
+
+input {
+  padding-left: 15px;
+}
+
+button:focus,
+input:focus {
+  outline: none;
+  border: none;
+}
+
+:root {
+  --text-color: #ffffff;
+  --border-color: #ffffff;
+  --bg-color: #ffffff;
+  --red: #eb4116;
+}
+
+/*! ******** Ended Default Styles *********/
+
+/*! ******** Started header Nav (Section) *********/
+
+#header {
+  min-height: 10vh;
+  background-image: linear-gradient(90deg, #e96443, #904e95);
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.container-fluid-header {
+  max-width: 1250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-header {
+  font-family: 'Montserrat-Bold', sans-serif;
+  font-weight: 900;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.title-header:hover {
+  color: #f5eded;
+}
+
+.katalog-header {
+  border: 2px solid var(--border-color);
+  border-radius: 50px;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.katalog-btn-header {
+  color: var(--text-color);
+  background: transparent;
+  font-family: 'Montserrat-Medium';
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.katalog-bars-header span {
+  width: 22px;
+  height: 3px;
+  background: var(--bg-color);
+  margin: 5px 0;
+  display: block;
+  opacity: 0.9;
+  border-radius: 2px;
+}
+
+.katalog-bars-header span:first-child {
+  margin-top: 0;
+}
+
+.katalog-bars-header span:last-child {
+  margin-bottom: 0;
+}
+
+.search-header {
+  width: 500px;
+  height: 47px;
+  background: var(--bg-color);
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  border-radius: 25px;
+  box-sizing: border-box;
+}
+
+.search-input-header {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: rgb(0, 0, 0);
+}
+
+.search-btn-header {
+  height: 100%;
+  padding: 12px 15px;
+  background-color: #e96443;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  color: #ffffff;
+  cursor: pointer;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  margin-left: 10px;
+}
+
+.lists-header {
+  display: flex;
+  gap: 25px;
+}
+
+.lists-header a {
+  color: #ffffff;
+  display: block;
+  font-size: 15px;
+  font-family: 'Montserrat-Regular', sans-serif;
+  font-weight: 700;
+}
+
+/*! Started Katalog (Section)  */
+
+.katalog {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.26);
+  display: none;
+}
+
+.katalog.show {
+  display: block;
+}
+
+.close-btn-katalog {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--red);
+  border-radius: 50%;
+  color: var(--text-color);
+  font-size: 18px;
+  position: absolute;
+  top: 15px;
+  left: 36%;
+  transition: all .2s;
+  z-index: 7;
+}
+
+.close-btn-katalog:active {
+  transform: scale(0.8);
+}
+
+.lists-katalog {
+  width: 35%;
+  height: 100%;
+  background: var(--bg-color);
+  padding: 15px 24px;
+  overflow-y: scroll;
+  transform: translateX(-100%);
+  transition: transform 5s;
+}
+
+.lists-katalog.show {
+  transform: translateX(0);
+}
+
+.lists-katalog li {
+  margin: 7px 0;
+}
+
+.lists-katalog a {
+  font-family: 'Montserrat-Regular', sans-serif;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000000;
+  letter-spacing: 1px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  transition: all .2s;
+}
+
+.lists-katalog a.active {
+  background-color: var(--red);
+  color: var(--text-color);
+}
+
+.lists-katalog a.hover {
+  color: var(--red);
+}
+
+.lists-katalog li:first-child {
+  margin-top: 0;
+}
+
+.lists-katalog li:last-child {
+  margin-bottom: 0;
+}
+
+
+
+/*! Ended Katalog (Section)  */
+
+
+/*! ******** Ended header Nav (Section) *********/
+
+
+
