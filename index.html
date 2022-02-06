@@ -15,7 +15,7 @@
 <body>
   
   <!--! ******** Started Header Nav (Section) ******** -->
-
+  
   <header class="header" id="header">
     <div class="container-fluid container-fluid-header">
       <div class="logo-header">
@@ -29,7 +29,7 @@
           <span></span>
         </div>
       </div>
-      <form action="#">
+      <form action="#" class="form-header">
         <div class="search-header">
           <input class="search-input-header" type="search" placeholder="Topilmalarni qidirish...">
           <button type="button" class="search-btn-header"><i class="fas fa-search"></i></button>
@@ -37,36 +37,94 @@
       </form>
       <div class="links-header">
         <ul class="lists-header">
-          <li><a href=""><i class="far fa-user pr-1"></i> Kirish </a></li>
+          <li><button type="button" class="sign-in-link"><i class="far fa-user pr-1 "></i> Kirish </button></li>
           <li><a href=""><i class="fas fa-bullhorn pr-1"></i> E'lon berish </a></li>
         </ul>
       </div>
     </div>
   </header>
-
+  
   <!--! Started Katalog (Section) -->
-
+  
   <div class="katalog">
     <button class="close-btn-katalog"><i class="fas fa-times"></i></button>
     <ul class="lists-katalog">
       <li><a href="#" class="active">So'ngi topilmalar</a></li>
-      <li><a href="#">Noutbuk, telefon, planshet, ... </a></li>
-      <li><a href="#">Qimmatbaho toshlar</a></li>
+      <li><a href="#">Shaxsiy hujjatlar</a></li>
       <li><a href="#">Mashina hujjatlari</a></li>
+      <li><a href="#">Bank kartalari</a></li>
+      <li><a href="#">Avtomobil jihozlari</a></li>
+      <li><a href="#">Elektron buyumlar</a></li>
+      <li><a href="#">Qimmatbaho toshlar</a></li>
+      <li><a href="#">Boshqalar...</a></li>
     </ul>
   </div>
-
+  
   <!--! Ended Katalog (Section) -->
-
+  
+  <!--! Started sign up and sign in (Section) -->
+  
+  <div class="sign-wrapper">
+    <div class="sign-in">
+      <button class="close-sign-wrapper"><i class="fas fa-times"></i></button>
+      <h2 class="title-sign-in">Kirish</h2>
+      <form action="#" class="form-sign-in">
+        <div class="phone-number">
+          <label for="phone-sign-in">Telefon raqami</label>
+          <input type="tel" id="phone-sign-in" autocomplete="off" required>
+          <span class="info-phone-number"></span>
+        </div>
+        <div class="password">
+          <label for="password-sign-in">Parol</label>
+          <input type="password" id="password-sign-in" autocomplete="off" required>
+        </div>
+        <div class="btns-sign-wrapper">
+          <button type="submit" class="btn-sign-in">Kirish</button>
+          <button type="button" class="btn-open-sign-up">Ro'yxatdan o'tish</button>
+        </div>
+      </form>
+    </div>
+    <div class="sign-up">
+      <button class="close-sign-wrapper"><i class="fas fa-times"></i></button>
+      <h2 class="title-sign-up">Ro'yxatdan o'tish</h2>
+      <form action="#" class="form-sign-up">
+        <div class="fName">
+          <label for="fName">Ismingiz</label>
+          <input type="" id="fName" autocomplete="off" required>
+          <span class="info-phone-number"></span>
+        </div>
+        <div class="phone-number">
+          <label for="phone-sign-up">Telefon raqami</label>
+          <input type="tel" id="phone-sign-up" autocomplete="off" required>
+        </div>
+        <div class="password">
+          <label for="password-sign-up">Parol</label>
+          <input type="password" id="password-sign-up" autocomplete="off" required>
+        </div>
+        <div class="reset-password">
+          <label for="reset-password-sign-up">Parolni qaytadan kiriting</label>
+          <input type="password" id="reset-password-sign-up" autocomplete="off" required>
+        </div>
+        <div class="btns-sign-wrapper">
+          <button type="submit" class="btn-sign-up">Ro'yxatdan o'tish</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  
+  
+  <!--! Ended sign up and sign in (Section) -->
+  
   <!--! ******** Ended Header Nav (Section) ******** -->
-
-
-
+  
+  
+  
   <!--! ******** Started JS links ******** -->
   <script src="./js/jquery.js"></script>
   <script src="./js/bootstrap.min.js"></script>
   <script src="./js/app.js"></script>
   <!--! ******** Ended JS links ******** -->
-
+  
 </body>
 </html>

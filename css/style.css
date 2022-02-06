@@ -46,6 +46,7 @@ input:focus {
   --border-color: #ffffff;
   --bg-color: #ffffff;
   --red: #eb4116;
+  --black: #000000;
 }
 
 /*! ******** Ended Default Styles *********/
@@ -156,12 +157,13 @@ input:focus {
   gap: 25px;
 }
 
-.lists-header a {
+.lists-header button,
+.lists-header a  {
   color: #ffffff;
-  display: block;
   font-size: 15px;
   font-family: 'Montserrat-Regular', sans-serif;
   font-weight: 700;
+  background-color: transparent;
 }
 
 /*! Started Katalog (Section)  */
@@ -194,7 +196,7 @@ input:focus {
   top: 15px;
   left: 36%;
   transition: all .2s;
-  z-index: 7;
+  z-index: 10;
 }
 
 .close-btn-katalog:active {
@@ -248,12 +250,232 @@ input:focus {
   margin-bottom: 0;
 }
 
-
-
 /*! Ended Katalog (Section)  */
-
 
 /*! ******** Ended header Nav (Section) *********/
 
+/*! ******** Started  header MEDIA Nav (Section) *********/
+
+@media screen and (max-width: 1119px) {
+  .search-header {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .title-header {
+    font-size: 20px;
+  }
+  .search-header {
+    width: 260px;
+  }
+  .katalog-btn-header {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container-fluid-header {
+    flex-wrap: wrap;
+  }
+  .logo-header {
+    width: 50%;
+  }
+  .search-header, .links-header {
+    margin-top: 15px;
+  }
+  .lists-katalog {
+    width: 50%;
+  }
+  .close-btn-katalog {
+    left: 51%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .logo-header {
+    width: auto;
+  }
+  .title-header {
+    font-size: 16px;
+  }
+  .katalog-header {
+    padding: 9px 18px;
+  }
+  .form-header, .search-header{
+    width: 100%;
+  }
+  .links-header {
+    margin-left: auto;
+  }
+  .lists-katalog {
+    width: 65%;
+  }
+  .close-btn-katalog {
+    left: 67%;
+  }
+  .lists-katalog {
+    padding: 15px 7px;
+  }
+  .lists-katalog a {
+    font-size: 12px;
+  }
+}
+
+/*! ******** Ended  header MEDIA Nav (Section) *********/
+
+/*! Started sign up and sign in (Section)  */
+
+.sign-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(240, 190, 190, 0.815);
+  justify-content: center;
+  align-items: center;
+  display: none;
+  z-index: 1;
+}
+
+.sign-wrapper.show {
+  display: flex;
+}
+
+.sign-in,
+.sign-up,
+.forget-password-wrapper {
+  width: 100%;
+  height: 100%;
+  max-width: 576px;
+  background: #ffffff;
+  padding: 70px 70px;
+  overflow-y: scroll;
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 7;
+}
+
+.sign-in.show, 
+.sign-up.show {
+  display: block;
+}
+
+.close-sign-wrapper {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border-radius: 50%;
+  color: var(--black);
+  transition: all .2s;
+  margin-left: auto;
+  font-size: 22px;
+}
+
+.close-sign-wrapper:hover {
+  background: #5250db;
+  color: #ffffff;
+}
+
+.title-sign-up ,
+.title-sign-in {
+  color: var(--black);
+  font-weight: 500;
+  font-size: 32px;
+  font-family: 'Montserrat-Regular', sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.form-sign-in, 
+.form-sign-up {
+  margin: 30px 0;
+}
+
+.form-sign-in label ,
+.form-sign-up label,
+.info-phone-number  {
+  color: var(--red);
+  font-weight: 500;
+  font-size: 14px;
+  font-family: 'Montserrat-Medium', sans-serif;
+  letter-spacing: 1px;
+  display: block;
+}
+
+.info-phone-number {
+  font-size: 12px;
+}
+
+.form-sign-in input,
+.form-sign-up input {
+  width: 100%;
+  height: 55px;
+  border: 2px solid var(--red);
+  border-radius: 50px;
+  margin-bottom: 15px;
+  color: var(--black);
+  font-family: 'Montserrat-Medium', sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.password-forget {
+  text-align: right;
+  
+}
+
+.password-forget a {
+  color: #0bdfd4;
+  font-family: 'Montserrat-Medium', sans-serif;
+  font-weight: 500;  
+  letter-spacing: 1px;
+}
+
+.btns-sign-wrapper button {
+  width: 100%;
+  height: 50px;
+  display: block;
+  margin: 25px 0;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-family: 'Montserrat-Medium', sans-serif;
+  font-weight: 500;  
+  letter-spacing: 1px;
+  border: 2px solid;
+}
+
+.btn-sign-in {
+  background: var(--red);
+  border-color: var(--red);
+  color: var(--text-color);
+}
+
+.btn-sign-up {
+  background: transparent;
+  border-color: var(--black);
+  color: var(--black);
+}
+
+
+
+/*! Started  sign up and sign in MEDIA (Section)  */
+
+@media screen and (max-width: 575px) {
+  .sign-in, .sign-up, .forget-password-wrapper {
+    padding: 30px;
+  }
+}
+
+/*! Ended  sign up and sign in MEDIA (Section)  */
+
+/*! Ended sign up and sign in (Section)  */
 
 
